@@ -15,6 +15,7 @@ namespace Catalog.API.EndPoints.Product
         }
         public async Task<IResult> CreateProduct(CreateProductCommand req)
         {
+            var test = 1;
             var command = req.Adapt<CreateProductCommand>();
             var result = await _sender.Send(command);
             var response = result.Adapt<CreateProductResult>();
